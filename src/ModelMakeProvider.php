@@ -16,7 +16,7 @@ class ModelMakeProvider extends ServiceProvider implements DeferrableProvider
     {
         if (! $this->app->environment('production')) {
             $this->app->singleton('command.model.make', function ($app) {
-                return new MakeModelCommand($app['files']);
+                return new ModelMakeCommand($app['files']);
             });
         }
     }
