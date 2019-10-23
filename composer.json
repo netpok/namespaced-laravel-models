@@ -1,0 +1,36 @@
+{
+    "name": "netpok/namespaced-laravel-models",
+    "description": "Laravel package to help setting default namespace for the make:model command",
+    "type": "library",
+    "keywords": ["laravel", "model-make"],
+    "homepage": "https://github.com/netpok/namespaced-laravel-models",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Balázs Váradi",
+            "email": "netpok@gmail.com",
+            "homepage": "https://github.com/netpok",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netpok\\NamespacedLaravelModels\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Netpok\\NamespacedLaravelModels\\ModelMakeProvider"
+            ]
+        }
+    }
+}
