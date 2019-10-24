@@ -30,3 +30,6 @@ publish the configuration and set your preferred namespace.
 ``` bash
 php artisan vendor:publish --provider="Netpok\NamespacedLaravelModels\ModelMakeServiceProvider"
 ```
+
+## Laravel 7 support
+Laravel 7 is under heavy development, but the current state (2019-10-24) is supported by the [next](https://github.com/netpok/namespaced-laravel-models/tree/next) branch.
