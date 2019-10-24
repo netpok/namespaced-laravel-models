@@ -5,10 +5,9 @@ namespace Netpok\NamespacedLaravelModels;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class ModelMakeProvider extends ServiceProvider implements DeferrableProvider
+class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
-     * Register any application services.
      *
      * @return void
      */

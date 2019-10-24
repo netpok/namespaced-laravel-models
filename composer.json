@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Netpok\\NamespacedLaravelModels\\ModelMakeProvider"
+                "Netpok\\NamespacedLaravelModels\\ModelMakeServiceProvider"
             ]
         }
     }

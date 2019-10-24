@@ -18,6 +18,6 @@ service provider in your ```config/app.php``` file:
 ``` php
 'providers' => [
     // ...
-    Netpok\\NamespacedLaravelModels\\ModelMakeProvider::class,
+    Netpok\\NamespacedLaravelModels\\ModelMakeServiceProvider::class,
 ];
 ```
