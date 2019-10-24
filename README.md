@@ -1,9 +1,10 @@
 # Namespaced Laravel Models
 
-This package extends the Laravel make:model command to allow setting
-the default namespace.
+This package's sole purpose is to allow setting the default namespace
+for the Laravel make:model command.
 
 * [Installation](#installation)
+* [Configuration](#configuration)
 
 ## Installation
 You can install this package via composer:
@@ -20,4 +21,12 @@ service provider in your ```config/app.php``` file:
     // ...
     Netpok\\NamespacedLaravelModels\\ModelMakeServiceProvider::class,
 ];
+```
+
+## Configuration
+By default this package sets the namespace to Models, but feel free to
+publish the configuration and set your preferred namespace.
+
+``` bash
+php artisan vendor:publish --provider="Netpok\NamespacedLaravelModels\ModelMakeServiceProvider"
 ```
