@@ -42,6 +42,6 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
      */
     public function provides()
     {
-        return ['command.model.make'];
+        return $this->app->environment('production') ? [] : ['command.model.make'];
     }
 }
