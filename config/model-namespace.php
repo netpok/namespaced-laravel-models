@@ -8,8 +8,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | This value determines the base namespace for the model:make command
-    | it is appended to the base namespace so you don't need to prefix it
-    | with "App\".
+    | it is prepended to the base namespace so you don't need to prefix it
+    | with the project's namespace ("App" by default).
     |
     */
 
