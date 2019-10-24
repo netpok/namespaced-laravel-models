@@ -10,7 +10,7 @@ for the Laravel make:model command.
 You can install this package via composer:
 
 ``` bash
-composer require netpok/namespaced-laravel-models
+composer require netpok/namespaced-laravel-models --dev
 ```
 
 The service provider will automatically register or you may manually add the
