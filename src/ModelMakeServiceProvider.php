@@ -17,11 +17,9 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
         $configPath = __DIR__.'/../config/model-namespace.php';
         $this->mergeConfigFrom($configPath, 'model-namespace');
 
-        if (! $this->app->environment('production')) {
-            $this->app->singleton('command.model.make', function ($app) {
-                return new ModelMakeCommand($app['files']);
-            });
-        }
+        $this->app->singleton('command.model.make', function ($app) {
+            return new ModelMakeCommand($app['files']);
+        });
     }
 
     /**
@@ -42,6 +40,6 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
      */
     public function provides()
     {
-        return $this->app->environment('production') ? [] : ['command.model.make'];
+        return ['command.model.make'];
     }
 }
