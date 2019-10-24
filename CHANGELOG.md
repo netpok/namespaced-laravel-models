@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.2] - 2017-06-20
 ### Added
-- Support for Laravel 5.8 and up
+- Support for Laravel 5.8
 
 ## [1.0.1] - 2017-06-20
 ### Added
