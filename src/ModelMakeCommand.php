@@ -14,6 +14,6 @@ class ModelMakeCommand extends BaseCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Models';
+        return $rootNamespace.'\\'.trim(config('model-namespace.namespace'), '\\');
     }
 }
