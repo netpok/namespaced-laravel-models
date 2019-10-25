@@ -23,6 +23,12 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
                 $app['config']->get('model-namespace.namespace')
             );
         });
+
+        foreach (['model', 'controller', 'factory', 'observer', 'policy'] as $type){
+            $this->app->afterResolving('command.'.$type.'.make', function ($command) {
+                $command->initializeModelNamespaceFixer();
+            });
+        }
     }
 
     /**
