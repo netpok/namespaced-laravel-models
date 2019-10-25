@@ -2,6 +2,7 @@
 
 namespace Netpok\NamespacedLaravelModels;
 
+use Illuminate\Console\Command;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,10 +22,6 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
                 $app->getNamespace(),
                 $app['config']->get('model-namespace.namespace')
             );
-        });
-
-        $this->app->singleton('command.model.make', function ($app) {
-            return new ModelMakeCommand($app['files']);
         });
     }
 
