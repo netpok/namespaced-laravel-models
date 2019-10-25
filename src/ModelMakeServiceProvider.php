@@ -29,6 +29,14 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
     public function boot()
     {
         $this->publishes([$this->configPath() => config_path('model-namespace.php')]);
+
+        Command::macro('initializeModelNamespaceFixer', function() {
+            $this->setCode(function($input, $output){
+                app(ModelNamespaceFixer::class)->fixInput($this->getName(), $input);
+
+                return $this->execute($input, $output);
+            });
+        });
     }
 
     /**
