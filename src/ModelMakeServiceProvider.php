@@ -16,6 +16,13 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
     {
         $this->mergeConfigFrom($this->configPath(), 'model-namespace');
 
+        $this->app->singleton(ModelNamespaceFixer::class, function($app){
+            return new ModelNamespaceFixer(
+                $app->getNamespace(),
+                $app['config']->get('model-namespace.namespace')
+            );
+        });
+
         $this->app->singleton('command.model.make', function ($app) {
             return new ModelMakeCommand($app['files']);
         });
