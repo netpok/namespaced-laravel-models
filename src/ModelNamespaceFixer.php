@@ -10,7 +10,8 @@ class ModelNamespaceFixer
     protected $rootNamespace;
     protected $modelNamespace;
 
-    public function __construct($rootNamespace, $modelNamespace){
+    public function __construct(string $rootNamespace, string $modelNamespace)
+    {
         $this->rootNamespace = $rootNamespace;
         $this->modelNamespace = $modelNamespace;
     }
