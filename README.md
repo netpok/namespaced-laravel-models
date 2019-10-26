@@ -1,7 +1,7 @@
 # Namespaced Laravel Models
 
 This package's sole purpose is to allow setting the default namespace
-for the Laravel make:model command.
+for the Laravel make:model command and the other commands accepting models as parameters.
 
 * [Installation](#installation)
 * [Configuration](#configuration)
@@ -28,7 +28,7 @@ By default this package sets the namespace to Models under your route namespace 
 but feel free to publish the configuration and set your preferred namespace.
 
 ``` bash
-php artisan vendor:publish --provider="Netpok\NamespacedLaravelModels\ServiceProvider"
+php artisan vendor:publish --provider="Netpok\\NamespacedLaravelModels\\ServiceProvider"
 ```
 
 ## Laravel 7 support
