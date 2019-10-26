@@ -4,9 +4,9 @@ namespace Netpok\NamespacedLaravelModels;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseProvider;
 
-class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProvider
+class ServiceProvider extends BaseProvider implements DeferrableProvider
 {
     /**
      * The commands which have updatable model fields.

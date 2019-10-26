@@ -19,7 +19,7 @@ service provider in your ```config/app.php``` file:
 ``` php
 'providers' => [
     // ...
-    Netpok\NamespacedLaravelModels\ModelMakeServiceProvider::class,
+    Netpok\NamespacedLaravelModels\ServiceProvider::class,
 ];
 ```
 
@@ -28,7 +28,7 @@ By default this package sets the namespace to Models under your route namespace 
 but feel free to publish the configuration and set your preferred namespace.
 
 ``` bash
-php artisan vendor:publish --provider="Netpok\NamespacedLaravelModels\ModelMakeServiceProvider"
+php artisan vendor:publish --provider="Netpok\NamespacedLaravelModels\ServiceProvider"
 ```
 
 ## Laravel 7 support
