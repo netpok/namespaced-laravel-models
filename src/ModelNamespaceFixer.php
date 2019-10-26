@@ -2,6 +2,7 @@
 
 namespace Netpok\NamespacedLaravelModels;
 
+use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Symfony\Component\Console\Input\InputInterface;
 
@@ -62,7 +63,7 @@ class ModelNamespaceFixer
     {
         $name = ltrim($name, '\\/');
 
-        if (\Str::startsWith($name, $this->rootNamespace)) {
+        if (Str::startsWith($name, $this->rootNamespace)) {
             return $name;
         }
 
