@@ -88,7 +88,7 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
      */
     public function provides()
     {
-        return ['command.model.make'];
+        return array_merge([ModelNamespaceFixer::class], $this->commands);
     }
 
     protected function configPath(): string
