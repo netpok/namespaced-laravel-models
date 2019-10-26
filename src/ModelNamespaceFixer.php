@@ -103,6 +103,6 @@ class ModelNamespaceFixer
 
         $name = $this->modelNamespace.'\\'.str_replace('/', '\\', $name);
 
-        return trim($this->rootNamespace, '\\').'\\'.$name;
+        return '\\'.trim($this->rootNamespace, '\\').'\\'.$name;
     }
 }
