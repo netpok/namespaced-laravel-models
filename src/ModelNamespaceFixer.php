@@ -42,7 +42,7 @@ class ModelNamespaceFixer
     {
         $input->setArgument(
             'name',
-            dump($this->prefixClass($input->getArgument('name')))
+            $this->prefixClass($input->getArgument('name'))
         );
     }
 
