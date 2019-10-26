@@ -20,7 +20,7 @@ class ModelNamespaceFixer
         switch($command){
             case 'make:model':
                 $this->handleArgument($input);
-                return;
+                break;
             case 'make:controller':
                 $this->handleOption($input, 'parent');
                 // no break
@@ -28,7 +28,7 @@ class ModelNamespaceFixer
             case 'make:observer':
             case 'make:policy':
                 $this->handleOption($input, 'model');
-                return;
+                break;
             default:
                 throw new InvalidArgumentException(
                     sprintf('Command [%s] not supported', $command)
