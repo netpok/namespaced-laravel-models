@@ -9,7 +9,20 @@ use Illuminate\Support\ServiceProvider;
 class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
-     * Register the config and the command.
+     * The commands which have updatable model fields.
+     *
+     * @var array
+     */
+    protected $commands = [
+        'command.model.make',
+        'command.controller.make',
+        'command.factory.make',
+        'command.observer.make',
+        'command.policy.make',
+    ];
+
+    /**
+     * Register the service provider.
      *
      * @return void
      */
@@ -24,8 +37,8 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
             );
         });
 
-        foreach (['model', 'controller', 'factory', 'observer', 'policy'] as $type){
-            $this->app->afterResolving('command.'.$type.'.make', function ($command) {
+        foreach ($this->commands as $command) {
+            $this->app->afterResolving($command, function ($command) {
                 $command->initializeModelNamespaceFixer();
             });
         }
