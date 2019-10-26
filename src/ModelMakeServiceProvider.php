@@ -64,7 +64,7 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
     }
 
     /**
-     * Bootstrap the application configuration.
+     * Bootstrap the application configuration and register the macro.
      *
      * @return void
      */
@@ -72,8 +72,8 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
     {
         $this->publishes([$this->configPath() => config_path('model-namespace.php')]);
 
-        Command::macro('initializeModelNamespaceFixer', function() {
-            $this->setCode(function($input, $output){
+        Command::macro('initializeModelNamespaceFixer', function () {
+            $this->setCode(function ($input, $output) {
                 app(ModelNamespaceFixer::class)->fixInput($this->getName(), $input);
 
                 return $this->execute($input, $output);
@@ -91,6 +91,11 @@ class ModelMakeServiceProvider extends ServiceProvider implements DeferrableProv
         return array_merge([ModelNamespaceFixer::class], $this->commands);
     }
 
+    /**
+     * The path for the default config.
+     *
+     * @return string
+     */
     protected function configPath(): string
     {
         return __DIR__.'/../config/model-namespace.php';
