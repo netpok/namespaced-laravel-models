@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.0] - 2017-06-26
+## [2.0.1] - 2020-04-17
+### Added
+- Laravel 7 support
+
+## [2.0.0] - 2019-10-26
 ### Added
 - Added support for model parameters of `make:controller`, `make:factory`, `make:observer` and `make:policy`
 
@@ -16,15 +20,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Replace extended class with macro and afterResolving hooks
 
-## [1.0.3] - 2017-06-24
+## [1.0.3] - 2019-10-24
 ### Removed
 - Production mode checking to make comply with the Laravel way.
 
-## [1.0.2] - 2017-06-24
+## [1.0.2] - 2019-10-24
 ### Added
 - Support for Laravel 5.8
 
-## [1.0.1] - 2017-06-24
+## [1.0.1] - 2019-10-24
 ### Added
 - This changlog
 - MIT license
@@ -32,6 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - The Provider does not return the model:make command any more in production environment
 
-## [1.0.0] - 2017-06-24
+## [1.0.0] - 2019-10-24
 ### Added
 - Initial version implementing the configurable model make command
