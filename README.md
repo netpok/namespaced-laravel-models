@@ -6,6 +6,9 @@ for the Laravel make:model command and the other commands accepting models as pa
 * [Installation](#installation)
 * [Configuration](#configuration)
 
+## Abandoned
+This package is abandoned since this feature is natively supported in Laravel 8 and later
+
 ## Installation
 You can install this package via composer:
 
